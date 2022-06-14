@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none; color: black;}
+        ul { list-style: none;}
+
+        .header_wrap{
+
+        }
+        .header_top h1{
+            text-align: center;
+            background-color: aqua;
+        }
+        .util_menu{
+            width: 1440px;
+            margin: 0 auto;
+        }
+        .util_menu li{
+            float: right;
+            margin: 0 10px;
+        }
+        .util_menu li::before{
+                margin-right: 1em;
+                content: "|";
+        }
+        .util_menu li:last-child:before{
+            margin: 0;
+            display: none;
+        }
+        .header_bottom{
+            width: 1440px;
+            margin: 0 auto;
+            clear: both;
+        }
+        .header_bottom .logo{
+            float: left;
+            width: 200px;
+            height: 40px;
+            background-color: pink;
+        }
+        .header_bottom .logo img{
+            display: block;
+            width: 100%;
+        }
+        .header_bottom ul{
+            float: left;
+            width: 120px;
+            line-height: 2em;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        .header_bottom ul:hover .submenu{
+            display: block;
+        }
+        .header_bottom ul li{
+            font-size: 15px;
+
+        }
+        .submenu{
+            position: absolute;
+            left: -75px;
+            width: 200px; 
+            border: 1px solid #000;
+            border-top: 0;
+            background-color: aqua;
+            display:none;
+            text-align: center;
+        }
+        .ct_wrap{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+        <div class="header_top">
+            <h1>연세디에이지는 환자중심의 진료환경을 지향합니다.</h1>
+        </div>
+        <div class="util_menu">
+            <ul>
+                <li><a href="">join</a></li>
+                <li><a href="">login</a></li>
+            </ul>
+
+        </div>
+        <div class="header_bottom" >
+            <div class="logo"><img src="" alt="로고"></div>
+            <ul>
+                <a href="">메뉴1</a>
+                <div class="submenu">
+                <li><a href="sub1#1">메뉴1-1</a></li>
+                <li><a href="sub1#2">메뉴1-2</a></li>
+                <li><a href="sub1#3">메뉴1-3</a></li>
+                </div>
+            </ul>
+            <ul>
+                <a href="">메뉴2</a>
+                <div class="submenu">
+                <li><a href="sub2#1">메뉴2-1</a></li>
+                <li><a href="sub2#2">메뉴2-2</a></li>
+                <li><a href="sub2#3">메뉴2-3</a></li>
+                </div>
+            </ul>
+            <ul>
+                <a href="">메뉴3</a>
+                <div class="submenu">
+                <li><a href="sub3#1">메뉴3-1</a></li>
+                <li><a href="sub3#2">메뉴3-2</a></li>
+                <li><a href="sub3#3">메뉴3-3</a></li>
+                </div>
+            </ul>
+            <ul>
+                <a href="">메뉴4</a>
+                <div class="submenu">
+                <li><a href="sub4#1">메뉴4-1</a></li>
+                <li><a href="sub4#2">메뉴4-2</a></li>
+                <li><a href="sub4#3">메뉴4-3</a></li>
+                </div>
+            </ul>
+            <ul>
+                <a href="">메뉴5</a>
+                <div class="submenu">
+                <li><a href="sub5#1">메뉴5-1</a></li>
+                <li><a href="sub5#2">메뉴5-2</a></li>
+                <li><a href="sub5#3">메뉴5-3</a></li>
+                </div>
+            </ul>
+            <ul>
+                <a href="">메뉴6</a>
+                <div class="submenu">
+                <li><a href="sub6#1">메뉴6-1</a></li>
+                <li><a href="sub6#2">메뉴6-2</a></li>
+                <li><a href="sub6#3">메뉴6-3</a></li>
+                </div>
+            </ul>
+            <ul>
+                <a href="">메뉴7</a>
+                <div class="submenu">
+                <li><a href="sub7#1">메뉴7-1</a></li>
+                <li><a href="sub7#2">메뉴7-2</a></li>
+                <li><a href="sub7#3">메뉴7-3</a></li>
+                </div>  
+            </ul>
+        </div>
+    </div>
+    </header>
+
+    <div id="ct">
+        <div class="ct_wrap">
+            <div class="main-fade">
+                <div class="fadebox">
+                    <img src="http://www.urbanbrush.net/web/wp-content/uploads/edd/2020/02/urbanbrush-20200227023608426223.jpg" alt="이미지1">
+                    <img src="http://blog.jinbo.net/attach/615/200937431.jpg" alt="이미지2">
+                    <img src="https://www.onlineimagetool.com/resources/static/1.0.0/images/bg/split-screen.jpg" alt="이미지3">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
