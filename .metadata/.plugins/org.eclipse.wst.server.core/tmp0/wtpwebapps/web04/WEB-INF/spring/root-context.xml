@@ -48,7 +48,7 @@
 		<!-- dataSource의 ref는 반드시 해당 드라이버의 id가 들어가야함 -->
 	    <property name="dataSource" ref="dataSource"/>
 	    <!-- mybatis의 설정 방식과 외부 파일 위치 지정 -->
-	    <property name="configLocation" value="classpath:/mybatis.xml"/>
+	    <property name="configLocation" value="classpath:/mybatis-config.xml"/>
 	    <!-- xml로 sql명령을 내려지는 실제 파일을 지정 -->
 	    <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"/>
 	</bean>
