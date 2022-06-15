@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- 검색(메타) 정보 -->
+    <meta name="url" content="http://test.com">
+    <meta name="title" content="제목">
+    <meta name="description" content="설명">
+    <meta name="keywords" content="키워드">
+    <!-- 오픈 그래프 -->
+    <meta property="og:url" content="http://test.com">
+    <meta property="og:title" content="제목">
+    <meta property="og:description" content="설명">
+    <meta property="og:image" content="로고주소">
 
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css">
     <style>
         * {margin: 0; padding: 0;}
         a {text-decoration: none; color: black;}
         ul { list-style: none;}
 
-        .header_wrap{
 
+        /* 헤더 시작 */
+        .header_wrap{
+        clear: both;
         }
         .header_top h1{
             text-align: center;
@@ -64,6 +79,7 @@
 
         }
         .submenu{
+            z-index: 999;
             position: absolute;
             left: -75px;
             width: 200px; 
@@ -73,103 +89,356 @@
             display:none;
             text-align: center;
         }
+        .submenu_wrap{
+            position: relative;
+        }
+        /* 헤더 끝 */
+
+
+        /* 메인 시작 */
+        #ct{
+            clear: both;
+            width: 100%;
+        }
         .ct_wrap{
             clear: both;
         }
+        .main_fade{
+            overflow: hidden;
+            height: 1000px;
+        }
+        .fadebox {
+            width: 100%;
+        }
+        .fadebox img{
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+        .fade_btn_box{
+            position: absolute;
+        }
+        .fade_btn_box .prev_btn{
+            z-index: 999;
+            position: absolute;
+            top: calc(1000px/2);
+            left: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .fade_btn_box .next_btn{
+            z-index: 999;
+            position: absolute;
+            top: calc(1000px/2);
+            left: 1850px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .fade_btn_box2{
+            z-index: 998;
+            position: absolute;
+            top: 1100px;
+            left: 910px;
+            float: left;
+        }
+        .slider_btn{
+            display: inline-block;
+            background-color: #777;
+            width: 40px;
+            height: 10px;
+            cursor: pointer;
+        }
+        .main_banner{
+            clear: both;
+            display: flex;
+            width: 100%;
+        }
+        .banner_item{
+            width: 50%;
+        }
+        .banner_item img{
+            display: block;
+            width: 100%;
+        }
+        .sub_banner{
+            clear: both;
+            display: flex;
+            width: 100%;
+        }
+
+
+
+/* 푸터 시작 */
+            .footer_wrap {
+                clear: both;
+                width: 1440px;
+                margin: 0 auto;
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+
+            .ft_bind {
+                border-top: 1px solid black;
+                position: relative;
+            }
+
+            .footer_top {
+                padding-bottom: 50px;
+               
+            }
+
+            .footer_bottom {
+                float: left;
+                padding-top: 30px;
+            }
+
+            .footer_info {
+                padding-top: 30px;
+                margin-left: 200px;
+            }
+
+            .footer_info > .nav1 {
+                float: left;
+                padding-right: 20px;
+            }
+
+            #top_btn {
+                position: absolute;
+                right: 0;
+                top: 0.2rem;
+            }
+            /* 푸터 끝 */
+
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="header_wrap">
-        <div class="header_top">
-            <h1>연세디에이지는 환자중심의 진료환경을 지향합니다.</h1>
-        </div>
-        <div class="util_menu">
-            <ul>
-                <li><a href="">join</a></li>
-                <li><a href="">login</a></li>
-            </ul>
-
-        </div>
-        <div class="header_bottom" >
-            <div class="logo"><img src="" alt="로고"></div>
-            <ul>
-                <a href="">메뉴1</a>
-                <div class="submenu">
-                <li><a href="sub1#1">메뉴1-1</a></li>
-                <li><a href="sub1#2">메뉴1-2</a></li>
-                <li><a href="sub1#3">메뉴1-3</a></li>
-                </div>
-            </ul>
-            <ul>
-                <a href="">메뉴2</a>
-                <div class="submenu">
-                <li><a href="sub2#1">메뉴2-1</a></li>
-                <li><a href="sub2#2">메뉴2-2</a></li>
-                <li><a href="sub2#3">메뉴2-3</a></li>
-                </div>
-            </ul>
-            <ul>
-                <a href="">메뉴3</a>
-                <div class="submenu">
-                <li><a href="sub3#1">메뉴3-1</a></li>
-                <li><a href="sub3#2">메뉴3-2</a></li>
-                <li><a href="sub3#3">메뉴3-3</a></li>
-                </div>
-            </ul>
-            <ul>
-                <a href="">메뉴4</a>
-                <div class="submenu">
-                <li><a href="sub4#1">메뉴4-1</a></li>
-                <li><a href="sub4#2">메뉴4-2</a></li>
-                <li><a href="sub4#3">메뉴4-3</a></li>
-                </div>
-            </ul>
-            <ul>
-                <a href="">메뉴5</a>
-                <div class="submenu">
-                <li><a href="sub5#1">메뉴5-1</a></li>
-                <li><a href="sub5#2">메뉴5-2</a></li>
-                <li><a href="sub5#3">메뉴5-3</a></li>
-                </div>
-            </ul>
-            <ul>
-                <a href="">메뉴6</a>
-                <div class="submenu">
-                <li><a href="sub6#1">메뉴6-1</a></li>
-                <li><a href="sub6#2">메뉴6-2</a></li>
-                <li><a href="sub6#3">메뉴6-3</a></li>
-                </div>
-            </ul>
-            <ul>
-                <a href="">메뉴7</a>
-                <div class="submenu">
-                <li><a href="sub7#1">메뉴7-1</a></li>
-                <li><a href="sub7#2">메뉴7-2</a></li>
-                <li><a href="sub7#3">메뉴7-3</a></li>
-                </div>  
-            </ul>
-        </div>
-    </div>
+    <header id="header">
+      
     </header>
 
     <div id="ct">
         <div class="ct_wrap">
-            <div class="main-fade">
+            <div class="main_fade">
                 <div class="fadebox">
-                    <img src="http://www.urbanbrush.net/web/wp-content/uploads/edd/2020/02/urbanbrush-20200227023608426223.jpg" alt="이미지1">
-                    <img src="http://blog.jinbo.net/attach/615/200937431.jpg" alt="이미지2">
-                    <img src="https://www.onlineimagetool.com/resources/static/1.0.0/images/bg/split-screen.jpg" alt="이미지3">
+                    <div class="fade_btn_box">
+                        <span class="prev_btn" >prev</span>
+                        <span class="next_btn" >next</span>
+                    </div>
+                    <div class="fade_btn_box2">
+                        <span class="slider_btn"></span>
+                        <span class="slider_btn"></span>
+                        <span class="slider_btn"></span>
 
+                    </div>
+
+                    <img src="http://www.urbanbrush.net/web/wp-content/uploads/edd/2020/02/urbanbrush-20200227023608426223.jpg" alt="이미지1" class="main_img">
+                    <img src="http://blog.jinbo.net/attach/615/200937431.jpg" alt="이미지2" class="main_img">
+                    <img src="https://www.onlineimagetool.com/resources/static/1.0.0/images/bg/split-screen.jpg" alt="이미지3" class="main_img">
                 </div>
-            </div>
 
+            </div>
+        </div>
+
+        <div class="main_banner">
+            <div class="banner_item"><img src="./main_banner01.jpg" alt=""></div>
+            <div class="banner_item"><img src="./main_banner02.jpg" alt=""></div>
+        </div>
+        <div class="sub_banner">
+            <!-- <div class="sub_item"><img src="./main_banner01.jpg" alt=""></div>
+            <div class="sub_item"><img src="./main_banner02.jpg" alt=""></div> -->
 
         </div>
+
+
     </div>
 
-    <footer>
+    <footer id="footer">
 
     </footer>
+
+    <script>
+        $(document).ready(function(){
+        $("#header").load("./hd.html");
+        $("#footer").load("./ft.html");
+
+
+        function slider_ck(){
+            var f1 = $(".main_img").eq(0).css("display");
+            var f2 = $(".main_img").eq(1).css("display");
+            var f3 = $(".main_img").eq(2).css("display");
+            var fs = 0;
+            if (f1 === "block") {
+                fs=1;
+            } else if(f2 === "block"){
+                fs=2;
+            } else if (f3 === "block"){
+                fs=3;
+            }
+
+            if(fs===1){
+            $(".slider_btn").eq(0).css("background-color","black");
+            $(".slider_btn").eq(1).css("background-color","#777");
+            $(".slider_btn").eq(2).css("background-color","#777");
+            }else if(fs===2){
+            $(".slider_btn").eq(1).css("background-color","black");
+            $(".slider_btn").eq(0).css("background-color","#777");
+            $(".slider_btn").eq(2).css("background-color","#777");
+            }else if(fs===3){
+            $(".slider_btn").eq(2).css("background-color","black");
+            $(".slider_btn").eq(1).css("background-color","#777");
+            $(".slider_btn").eq(0).css("background-color","#777");
+            }
+
+        }
+
+
+        $(".main_img").eq(1).fadeOut();
+        $(".main_img").eq(2).fadeOut();
+        slider_ck();
+
+        var interval = setInterval(function(){
+            next();   
+        },7000);
+
+
+
+        $(".prev_btn").click(function(){
+            clearInterval(interval);
+            prev();
+        });
+
+        $(".next_btn").click(function(){
+            clearInterval(interval);
+            next();
+        });
+
+
+        $(".slider_btn").eq(0).click(function(){
+            clearInterval(interval);
+            $(".main_img").eq(1).fadeOut(1000).delay(1000);
+            $(".main_img").eq(2).fadeOut(1000).delay(1000);
+            $(".main_img").eq(0).delay(1000).fadeIn(1000);
+            $(".slider_btn").eq(0).css("background-color","black");
+            $(".slider_btn").eq(1).css("background-color","#777");
+            $(".slider_btn").eq(2).css("background-color","#777");
+        });
+
+        $(".slider_btn").eq(1).click(function(){
+            clearInterval(interval);
+            $(".main_img").eq(0).fadeOut(1000).delay(1000);
+            $(".main_img").eq(2).fadeOut(1000).delay(1000);
+            $(".main_img").eq(1).delay(1000).fadeIn(1000);
+            $(".slider_btn").eq(1).css("background-color","black");
+            $(".slider_btn").eq(0).css("background-color","#777");
+            $(".slider_btn").eq(2).css("background-color","#777");
+        });
+
+        $(".slider_btn").eq(2).click(function(){
+            clearInterval(interval);
+            $(".main_img").eq(0).fadeOut(1000).delay(1000);
+            $(".main_img").eq(1).fadeOut(1000).delay(1000);
+            $(".main_img").eq(2).delay(1000).fadeIn(1000);
+            $(".slider_btn").eq(2).css("background-color","black");
+            $(".slider_btn").eq(0).css("background-color","#777");
+            $(".slider_btn").eq(1).css("background-color","#777");
+        });
+
+
+
+
+        function prev(){
+            
+            var f1 = $(".main_img").eq(0).css("display");
+            var f2 = $(".main_img").eq(1).css("display");
+            var f3 = $(".main_img").eq(2).css("display");
+            var fs = 0;
+
+            if (f1 === "block") {
+                fs=1;
+            } else if(f2 === "block"){
+                fs=2;
+            } else if (f3 === "block"){
+                fs=3;
+            }
+
+            switch (fs) {
+                case 1:
+                $(".main_img").eq(0).fadeOut(1000).delay(1000);
+                $(".main_img").eq(2).delay(1000).fadeIn(1000);
+                $(".slider_btn").eq(2).css("background-color","black");
+                $(".slider_btn").eq(1).css("background-color","#777");
+                $(".slider_btn").eq(0).css("background-color","#777");
+                break;
+                case 2:
+                $(".main_img").eq(1).fadeOut(1000).delay(1000);
+                $(".main_img").eq(0).delay(1000).fadeIn(1000);
+                $(".slider_btn").eq(0).css("background-color","black");
+                $(".slider_btn").eq(1).css("background-color","#777");
+                $(".slider_btn").eq(2).css("background-color","#777");
+                break;
+                case 3:
+                $(".main_img").eq(2).fadeOut(1000).delay(1000);
+                $(".main_img").eq(1).delay(1000).fadeIn(1000);
+                $(".slider_btn").eq(1).css("background-color","black");
+                $(".slider_btn").eq(0).css("background-color","#777");
+                $(".slider_btn").eq(2).css("background-color","#777");
+                break;
+
+            }
+            
+        }
+
+         function next(){
+            
+            var f1 = $(".main_img").eq(0).css("display");
+            var f2 = $(".main_img").eq(1).css("display");
+            var f3 = $(".main_img").eq(2).css("display");
+            var fs = 0;
+
+            if (f1 === "block") {
+                fs=1;
+            } else if(f2 === "block"){
+                fs=2;
+            } else if (f3 === "block"){
+                fs=3;
+            }
+            
+            switch (fs) {
+                case 1:
+                $(".main_img").eq(0).fadeOut(1000).delay(1000);
+                $(".main_img").eq(1).delay(1000).fadeIn(1000);
+                $(".slider_btn").eq(1).css("background-color","black");
+                $(".slider_btn").eq(0).css("background-color","#777");
+                $(".slider_btn").eq(2).css("background-color","#777");
+                break;
+                case 2:
+                $(".main_img").eq(1).fadeOut(1000).delay(1000);
+                $(".main_img").eq(2).delay(1000).fadeIn(1000);
+                $(".slider_btn").eq(2).css("background-color","black");
+                $(".slider_btn").eq(1).css("background-color","#777");
+                $(".slider_btn").eq(0).css("background-color","#777");
+                break;
+                case 3:
+                $(".main_img").eq(2).fadeOut(1000).delay(1000);
+                $(".main_img").eq(0).delay(1000).fadeIn(1000);
+                $(".slider_btn").eq(0).css("background-color","black");
+                $(".slider_btn").eq(1).css("background-color","#777");
+                $(".slider_btn").eq(2).css("background-color","#777");
+                break;
+
+            }
+         }
+
+
+
+        });
+
+
+
+        
+         
+         
+    </script>    
 </body>
 </html>
