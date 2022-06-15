@@ -2,7 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
 <%@ page session="false" %>
 <%response.setCharacterEncoding("utf-8"); %>
 <html lang="ko">
@@ -16,7 +15,6 @@
 <h1>
 	Hello world!  
 </h1>
-
 <P>  The time on the server is ${serverTime}. </P>
 <p><a href="./test">테스트로</a></p>
 <p><a href="./map">맵테스트로</a></p>
@@ -32,9 +30,7 @@
 <td>${DTO.mid }</td>
 <td>${DTO.mname }</td>
 </tr>
-
 </c:forEach>
-
 </table>
 </body>
 </html>
