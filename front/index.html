@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css">
     <style>
-        * {margin: 0; padding: 0;}
+        * {margin: 0; padding: 0; box-sizing: border-box;}
         a {text-decoration: none; color: black;}
         ul { list-style: none;}
 
@@ -29,13 +29,22 @@
         .header_wrap{
         clear: both;
         }
+        .header_top{
+            background-image: url("./img/top_banner_bg.jpg");
+            height: 60px;
+        }
         .header_top h1{
+            color: #fff;
             text-align: center;
-            background-color: aqua;
+            line-height: 60px;
+            font-weight: 500;
+            margin: 0;
+            
         }
         .util_menu{
             width: 1440px;
             margin: 0 auto;
+            line-height: 25px;
         }
         .util_menu li{
             float: right;
@@ -49,6 +58,11 @@
             margin: 0;
             display: none;
         }
+        .util_wrap{
+            width: 100%;
+            height: 25px;
+            background-color: #ddd;
+        }
         .header_bottom{
             width: 1440px;
             margin: 0 auto;
@@ -58,7 +72,6 @@
             float: left;
             width: 200px;
             height: 40px;
-            background-color: pink;
         }
         .header_bottom .logo img{
             display: block;
@@ -85,7 +98,7 @@
             width: 200px; 
             border: 1px solid #000;
             border-top: 0;
-            background-color: aqua;
+            background-color: #fff;
             display:none;
             text-align: center;
         }
@@ -160,11 +173,229 @@
             display: block;
             width: 100%;
         }
+
+
         .sub_banner{
+            margin-top: 50px;
             clear: both;
             display: flex;
+            width: 2050px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+        .sub_item{
+            position: relative;
+            width: 268px;
+            text-align: center;
+            border: 1px solid #888;
+            margin: 10px;
+            
+        }
+        .sub_item h1{
+            display: inline-block;
+            text-align: center;
+            color: #FFF;
+            background-color: #385699;
+            border-radius:1em;
+            width: 80%;
+            font-weight: 400;
+            margin-top: 50px;
+        }
+        .sub_item .sub_txt1{
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+        .sub_item .sub_txt2{
+            font-size: 16px;
+            margin-bottom: 1em;
+            color: #555;
+        }
+        .sub_item .sub_imgbox{
+            display: block;
+            width: 96%;
+            height: 255px;
+            margin: 0 auto;
+        }
+        .sub_item img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .sub_banner_view{
+            width: 1150px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .sub_btn_box{
+            position: relative;
+            top: 355px;
+            font-size: 50px;
+        }
+        .sub_prev_btn{
+            cursor: pointer;
+            position: relative;
+            left: 325px;
+            font-size: 50px;
+        }
+        .sub_next_btn{
+            cursor: pointer;
+            position: relative;
+            left: 1485px;
+            font-size: 50px;
+        }
+        .main_about{
+    clear: both;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    background-image: url("./img/main_bg01.jpg");
+    margin-top: 100px;
+}
+.main_about_titbox{
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.main_about_imgbox{
+padding-bottom: 30px;   
+}
+.main_about_btnbox{
+    padding-bottom: 30px;
+}
+.main_about_btnbox a{
+display: block;
+color: #fff;
+border: 1px solid #fff;
+width: 200px;
+line-height: 3em;
+}
+.main_about_btnbox a:hover{
+color: #000;
+background-color: #fff;
+font-weight: bold;
+transition: 1s;
+}
+.main_about .color1{
+    color: #9be3e7;
+}
+.main_about .color2{
+    color: #b2e3c7;
+}        
+
+.board_box{
+            width: 1150px;
+            margin: 0 auto;
+            margin-top: 50px;
+            display: flex;
+        }
+        .review_box{
+            margin: 5px;
+            width: 50%;
+        }
+        .news_box{
+            margin: 5px;
+            width: 50%;
+        }
+        .board_tit h2{
+            color: #425c96;
+            border-bottom: 1px solid #425c96;
+        }
+        .board_box a{
+            color: #425c96;
+            position: relative;
+            display: inline-block;
+            border: 1px solid #425c96;
+            width: 30px;
+            top: -5px;
+            left: 390px;
+        }
+        .news_box a{
+            left: 462px;
+        }
+        .board_box table{
+            margin-top: 10px;
             width: 100%;
         }
+        .main_customer {
+            clear: both;
+            width: 1440px;
+            margin: 0 auto;
+            padding-top : 95px;
+            padding-bottom: 50px;
+        }
+        .info {
+            float: left;
+        }
+        .info h2{
+            font-size: 60px;
+            padding-bottom: 10px;
+            color: #39579b;
+        }
+        .info .txt {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        dl, dt, dd {
+            padding: 0;
+            margin: 0;
+            line-height: 1.4;
+        }
+        dl {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 700px;
+        }
+        dt {
+            clear: left;
+            float: left;
+            display: block;
+            margin: 0 0 1px;
+            color: #39579b;
+            font-size: 20px;
+        }
+        dd {
+            padding: 0 0 0 100px;
+            padding-top: 10px;
+            padding-left: 120px;
+            margin: 0 0 1px;
+            width: 100%;   
+            font-size: 20px;
+            
+        }
+
+        .p_color1 {
+            color: red;
+        }
+        .p_color2 {
+            color : #3d5bbb;
+        }
+
+        
+        dd::after {
+            content: ""; display: table; clear: both;
+        }
+         .dl_style1 .icon > img {
+            float: left;
+        }
+        
+        .location {
+            float: right;
+        }
+        .xi-youtube-play:hover {
+            color: red;
+        }
+        .xi-instagram:hover {
+            color: #3f729b;
+        }
+        .xi-kakaotalk:hover {
+            color: #f9e000;
+        }
+        .xi-message:hover {
+            color: green;
+        }
+
 
 
 
@@ -241,15 +472,197 @@
         </div>
 
         <div class="main_banner">
-            <div class="banner_item"><img src="./main_banner01.jpg" alt=""></div>
-            <div class="banner_item"><img src="./main_banner02.jpg" alt=""></div>
+            <div class="banner_item"><img src="./img/main_banner01.jpg" alt=""></div>
+            <div class="banner_item"><img src="./img/main_banner02.jpg" alt=""></div>
         </div>
+        <div class="sub_btn_box_wrap">
+            <div class="sub_btn_box">
+                <span class="sub_prev_btn"><</span>
+                <span class="sub_next_btn">></span>
+                
+            </div>
+        </div>
+        <div class="sub_banner_view">
         <div class="sub_banner">
-            <!-- <div class="sub_item"><img src="./main_banner01.jpg" alt=""></div>
-            <div class="sub_item"><img src="./main_banner02.jpg" alt=""></div> -->
+            <div class="sub_item">
+                <h1>쁘띠성형</h1>
+                <p class="sub_txt1">Botox</p>
+                <p class="sub_txt2">잔주름, 사각턱, 종아리, 다한증까지 보톡스로 해결하세요</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide01.jpg" alt=""></div>
+            </div>
+            <div class="sub_item">
+                <h1>리프팅 레이저</h1>
+                <p class="sub_txt1">RF</p>
+                <p class="sub_txt2">콜라겐&세포 리빌더<br>RF Lifting</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide02.jpg" alt=""></div>
+            </div>
+            <div class="sub_item">
+                <h1>안티에이징</h1>
+                <p class="sub_txt1">ANTI-AGING</p>
+                <p class="sub_txt2">내몸에 맞는 1:1 맞춤<br>안티에이징주사</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide04.jpg" alt=""></div>
+            </div>
+            <div class="sub_item">
+                <h1>쁘띠성형</h1>
+                <p class="sub_txt1">Filler</p>
+                <p class="sub_txt2">코,이마,볼,무턱 입체적인 얼굴 완성<br>Filler</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide05.jpg" alt=""></div>
+            </div>
+            <div class="sub_item">
+                <h1>리프팅 레이저</h1>
+                <p class="sub_txt1">HIFU</p>
+                <p class="sub_txt2">리프팅과 피부개선을 동시에<br> HIFU Lifting</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide06.jpg" alt=""></div>
+            </div>
+            <div class="sub_item">
+                <h1>안티에이징</h1>
+                <p class="sub_txt1">ANTI-AGING</p>
+                <p class="sub_txt2">노화방지와 탄력을 동시에!<br>ANTI-AGING</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide07.jpg" alt=""></div>
+            </div>
+            <div class="sub_item">
+                <h1>실리프팅</h1>
+                <p class="sub_txt1">Thread lifting</p>
+                <p class="sub_txt2">특허받은 고정실로 매끈한 얼굴라인을 만들어드립니다.</p>
+                <div class="sub_imgbox"> <img src="./img/multi_slide03.jpg" alt=""></div>
+            </div>
+            
+            
+        </div>
+    </div>
 
+
+    <div class="main_about">
+                <div class="main_about_titbox">
+                 <h3>아름다운 변화의 시작! 연세디에이지</h1>
+                <h1><span class="color1">연구</span>하고 노력하는 <span class="color1">윤효근 원장</span></h1>
+                <h2><span class="color2">10년 이상의 진료 노하우</span>를 바탕으로 <span class="color2">안전</span>하고<br>
+                    건강한 피부를 <span class="color2">책임</span>지겠습니다.</h2>
+                </div>
+                <div class="main_about_imgbox">
+                    <img src="./img/main_about.png" alt="">
+                    
+                </div>
+                <div class="main_about_btnbox">
+                    <a href="#">자세히 보기</a>
+                </div>
+
+    </div>
+
+    <div class="board_box">
+        <div class="review_box">
+            <div class="board_tit">
+                <h2>Real Review
+                    <a href="#">+</a>
+                </h2>
+            </div>
+            <div class="board_list">
+                <table>
+                    <tbody>
+                    <tr>
+                       <td>시흥 은계 색소치료 피부…</td>
+                       <td>2022-05-16</td>
+                    </tr>
+                    <tr>
+                        <td>은계피부과 연세디에이지의…</td>
+                        <td>2022-05-02</td>
+                     </tr>
+                     <tr>
+                        <td>시흥 은계 색소치료 피부…</td>
+                        <td>2022-04-20</td>
+                     </tr>
+                     <tr>
+                        <td>시흥 은계 색소치료 피부…</td>
+                        <td>2022-05-16</td>
+                     </tr>
+                     <tr>
+                        <td>시흥 은계 색소치료 피부…</td>
+                        <td>2022-05-16</td>
+                     </tr>
+                     <tr>
+                        <td>시흥 은계 색소치료 피부…</td>
+                        <td>2022-05-16</td>
+                     </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="news_box">
+            <div class="board_tit">
+                <h2>News
+                    <a href="#">+</a>
+                </h2>
+            </div>
+            <div class="board_list">
+                <table>
+                    <tbody>
+                    <tr>
+                       <td>얼굴 동안(童顏) 만들어…</td>
+                       <td>2022-03-29</td>
+                    </tr>
+                    <tr>
+                        <td>얼굴 동안(童顏) 만들어…</td>
+                        <td>2022-03-29</td>
+                     </tr>
+                     <tr>
+                       <td>얼굴 동안(童顏) 만들어…</td>
+                       <td>2022-03-29</td>
+                     </tr>
+                     <tr>
+                       <td>얼굴 동안(童顏) 만들어…</td>
+                       <td>2022-03-29</td>
+                     </tr>
+                     <tr>
+                       <td>얼굴 동안(童顏) 만들어…</td>
+                       <td>2022-03-29</td>
+                     </tr>
+                     <tr>
+                       <td>얼굴 동안(童顏) 만들어…</td>
+                       <td>2022-03-29</td>
+                     </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
+    </div>
+
+    <div class="main_customer">  
+        <div class="layout">
+            <div class="info"> 
+                <h2>Contact Us</h2>
+                <p class="txt">경기도 시흥시 은계번영길 9, 4F 409~411 (은행동 골드웨이) 연세디에이지의원</p>
+                <dl class="dl_style1">
+                    <dt><i class="icon"><img src="/img/info_icon01.png" alt=""></i>전화</dt>
+                    <dd>031.318.1013</dd><br>
+                    <dt><i class="icon"><img src="/img/info_icon02.png" alt=""></i>이메일</dt>
+                    <dd>faceartist@daum.net</dd><br>
+                    <dt><i class="icon"><img src="/img/info_icon03.png" alt=""></i>카카오톡</dt>
+                    <dd>연세디에이지의원</dd><br>
+                    <dt><i class="icon"><img src="/img/info_icon04.png" alt=""></i>진료시간</dt>
+                    <dd>
+                        <p><span>평&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일</span>AM 10:00 ~ PM 07:00 <em class="p_color1">(수요일 휴진)</em></p>
+                        <p><span>토&nbsp;&nbsp;요&nbsp;&nbsp;일</span><em class="p_color2">AM 10:00 ~ PM 03:00(점심시간 없이 진료)</em></p>
+                        <p><span>점심 평일</span>PM 01:00 ~ PM 02:00</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="location">
+            
+                <div id="daumRoughmapContainer1619019048980" class="map-wrap root_daum_roughmap root_daum_roughmap_landing"></div>
+
+            
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <script charset="UTF-8">
+                   new daum.roughmap.Lander({
+                      "timestamp" : "1619019048980",
+                      "key" : "25gjh"
+                   }).render();
+                </script>
+            </div>
+        </div>
+    </div>
 
     </div>
 
@@ -261,7 +674,25 @@
         $(document).ready(function(){
         $("#header").load("./hd.html");
         $("#footer").load("./ft.html");
+        var subpos=0;
 
+
+        $(".sub_prev_btn").click(function(){
+            if(subpos<3) sub_right();
+        });
+        
+        $(".sub_next_btn").click(function(){
+            if(subpos>0) sub_left();
+        });
+
+        function sub_right(){
+            $(".sub_item").animate({left:"-=288"},500);
+            subpos++
+        }
+        function sub_left(){
+            $(".sub_item").animate({left:"+=288"},500);
+            subpos--
+        }
 
         function slider_ck(){
             var f1 = $(".main_img").eq(0).css("display");
