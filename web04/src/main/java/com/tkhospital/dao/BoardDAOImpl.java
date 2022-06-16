@@ -20,25 +20,25 @@ public class BoardDAOImpl implements BoardDAO {
 	public List<BoardDTO> boardList() throws Exception {
 		return sqlSession.selectList("com.tkhospital.boardMapper.boardList");
 	}
-//
-//	@Override
-//	public BoardDTO boardRead(int no) throws Exception {
-//		return sqlSession.selectOne(namespace+".boardRead",no);
-//	}
-//
-//	@Override
-//	public void boardWrite(BoardDTO DTO) throws Exception {
-//		sqlSession.insert(namespace+".boardWrite",DTO);
-//	}
-//
-//	@Override
-//	public void boardUpdate(BoardDTO DTO) throws Exception {
-//		sqlSession.update(namespace+".boardUpdate",DTO);
-//	}
-//
-//	@Override
-//	public void boardDelete(int no) throws Exception {
-//		sqlSession.delete(namespace+".boardDelete",no);
-//	}
+
+	@Override
+	public BoardDTO boardRead(int no) throws Exception {
+		return sqlSession.selectOne(namespace+".boardRead",no);
+	}
+
+	@Override
+	public void boardWrite(BoardDTO DTO) throws Exception {
+		sqlSession.insert(namespace+".boardWrite",DTO);
+	}
+
+	@Override
+	public void boardUpdate(BoardDTO DTO) throws Exception {
+		sqlSession.update(namespace+".boardUpdate",DTO);
+	}
+
+	@Override
+	public void boardDelete(int no) throws Exception {
+		sqlSession.delete(namespace+".boardDelete",no);
+	}
 
 }

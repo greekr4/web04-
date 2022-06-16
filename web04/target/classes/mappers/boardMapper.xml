@@ -9,16 +9,12 @@ PUBLIC "-//mybatis.org//DTD Mpper 3.0//EN"
 	<select id="boardList" resultType="com.tkhospital.dto.BoardDTO">
 		select * from shop_board
 	</select>
-</mapper>
-<!-- 	
-	리스트만
 	
-	
-	자세히보기
+	<!-- 자세히보기 -->
 	<select id="boardRead" resultType="com.tkhospital.dto.BoardDTO">
 		select * from shop_board where no = #{no }
 	</select>
-	글쓰기
+	<!-- 글쓰기 -->
  	<insert id="boardWrite">
 		insert into shop_board values(
 					(select nvl(max(no),0)+1 from shop_board),
@@ -33,7 +29,7 @@ PUBLIC "-//mybatis.org//DTD Mpper 3.0//EN"
 		
 		)
 	</insert>
-	글수정
+	<!-- 글수정 -->
 	<update id="boardUpdate">
 		update shop_board set 
 					tit= #{tit },
@@ -42,11 +38,9 @@ PUBLIC "-//mybatis.org//DTD Mpper 3.0//EN"
 					lock_post= #{lock_post } 
 					where no = #{no }
 	</update>
-	글삭제
+	<!-- 글삭제 -->
 	<delete id="boardDelete">
 	delete from shop_board where no= #{no }
 	</delete>
-	
-	
-	리스트만
-	 -->
+
+	 </mapper>
