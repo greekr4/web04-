@@ -13,13 +13,14 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello world!   ${abc }
 </h1>
 <P>  The time on the server is ${serverTime}. </P>
 <p><a href="./test">테스트로</a></p>
 <p><a href="./map">맵테스트로</a></p>
 <p><a href="./doC">리스트테스트로</a></p>
 <p><a href="./doD">리다이렉트테스트</a></p>
+<p><a href="./board/list">보드리스트로</a></p>
 <table>
 <tr>
 <th>아이디</th>

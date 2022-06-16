@@ -4,7 +4,8 @@
  "http://mybatis.org/dtd/mybatis-3-config.dtd">
  <configuration>
 	<typeAliases>
- 		<package name="com.tkhospital.common" />
+<!--  		<package name="com.tkhospital.common" /> -->
+	  		<package name="com.tkhospital.dto" />
  	</typeAliases>
  
  </configuration>

@@ -1,4 +1,4 @@
-package com.tkhospital.myapp;
+package com.tkhospital.controller;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -28,49 +28,27 @@ import com.tkhospital.service.TestService;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+@RequestMapping("/board/*")
+public class BoardController {
 	
 	
-	@Inject
-	private TestService service;
 	
 	@Inject
 	private BoardService service2;
 
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 * @throws Exception 
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) throws Exception {
-		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		List<BoardDTO> list2 = service2.boardList();
-		model.addAttribute("list2",list2);
-		
-		List<testDTO> list = service.selectTest(); 
-		String abc = service.Test2();
-		model.addAttribute("abc",abc);
+	@RequestMapping(value = "list",method = RequestMethod.GET)
+	public String boardList(Model model) throws Exception {
+		List<BoardDTO> list = service2.boardList();
 		model.addAttribute("list",list);
-		
-		
-		model.addAttribute("serverTime", formattedDate );
-		return "home";
-	}
-	
-	@RequestMapping(value = "/test",method = RequestMethod.GET)
-	public String test(Locale locale, Model model) {
-		logger.info("테스트페이지");
-		model.addAttribute("msg","테스트");
-		return "test";
+		return "board/list";
 	}
 	
 	@RequestMapping(value = "/map",method = RequestMethod.GET)
@@ -101,12 +79,5 @@ public class HomeController {
 	public String doD(Locale locale, Model model) {
 		//해당 url로 자동포워딩후 이동됨
 		return "redirect:/doD";
-	}
-	
-	@RequestMapping(value = "/board/list",method = RequestMethod.GET)
-	public String boardList(Model model) throws Exception {
-		List<BoardDTO> list2 = service2.boardList();
-		model.addAttribute("list2",list2);
-		return "board/list";
 	}
 }

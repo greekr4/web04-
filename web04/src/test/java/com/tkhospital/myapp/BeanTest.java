@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 //1. spring과 junit 연동
 @RunWith(SpringRunner.class)
 //2. 데이터바인딩 환경설정을 어디에서 가져올 것인가?
+//@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 
 public class BeanTest {
@@ -26,6 +27,8 @@ public class BeanTest {
 	
 	@Test
 	void test() {
+		System.out.println(ctx);
+		System.out.println(ds);
 		assertNotNull(ctx);
 		//fail("Not yet implemented");
 	}

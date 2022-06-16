@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.tkhospital.common.testDTO;
+import com.tkhospital.dto.testDTO;
 
 @Repository
 public class TestDaoImpl implements testDAO {
@@ -20,6 +20,12 @@ public class TestDaoImpl implements testDAO {
 	public List<testDTO> selectTest() throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList(namespace+".test");
+	}
+
+	@Override
+	public String Test2() throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(namespace+".test2");
 	}
 
 }

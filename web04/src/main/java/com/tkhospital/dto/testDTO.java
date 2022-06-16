@@ -1,8 +1,8 @@
-package com.tkhospital.common;
+package com.tkhospital.dto;
 
 import java.util.Date;
 
-public class MemberDTO {
+public class testDTO {
 	private int mno;
 	private String mid;
 	private String mpw;
